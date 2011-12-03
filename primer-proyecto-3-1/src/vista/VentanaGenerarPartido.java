@@ -31,6 +31,7 @@ public class VentanaGenerarPartido extends JFrame{
 		btnSalirGp = new JButton(imgSalir);
 
 		btnGenerarPartidos.setActionCommand("Generar Partidos");
+		btnSalirGp.setActionCommand("Salir");
 		
 		panel.setLayout(null);
 		
