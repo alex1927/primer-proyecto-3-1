@@ -98,5 +98,33 @@ public class Partido {
 	public boolean isJuegosGenerados() {
         return juegosGenerados;
     }
+	
+	public void agregarJugadorAnotadorCasa(Jugador jugador){
+		if (!jugadoresGolCasa.contains(jugador))
+	  	   jugadoresGolCasa.add(jugador);
+	}
+	
+	public void agregarJugadorAnotadorVisitante(Jugador jugador){
+		if (!jugadoresGolVisitante.contains(jugador))
+		   jugadoresGolVisitante.add(jugador);
+	}
+
+
+	public boolean isContieneJugadorCasa(Jugador jugador){
+		return jugadoresGolCasa.contains(jugador);
+	}
+	
+	public boolean isContieneJugadorVisitante(Jugador jugador){
+		return jugadoresGolVisitante.contains(jugador);
+	}
+	
+	public List<Jugador> getJugadoresGolCasa() {
+		return jugadoresGolCasa;
+	}
+
+
+	public List<Jugador> getJugadoresGolVisitante() {
+		return jugadoresGolVisitante;
+	}
 
 }
