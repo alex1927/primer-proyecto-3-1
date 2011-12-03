@@ -8,14 +8,17 @@ import java.awt.event.WindowListener;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-
+import java.util.Random;
+import modelo.Arbitro;
 import modelo.Equipo;
+import modelo.Jugador;
 import modelo.Liga;
 import modelo.Partido;
 import vista.VentanaArbitro;
 import vista.VentanaAviso;
 import vista.VentanaGenerarPartido;
 import vista.VentanaPrincipal;
+import vista.VistaLigaOrdenada;
 
 public class ControladorVentanaGenerarPartido implements ActionListener {
 	
@@ -149,6 +152,110 @@ public class ControladorVentanaGenerarPartido implements ActionListener {
 		
 		return contieneEquipo;
 	}
+	
+	/*Asigna los Arbitros a los Partidos (se llama al pulsar el boton de generar partido)
+	  Precondicion: -Requiere que todos los Partidos se hayan cargado
+	                -El Nro de Arbitros debe ser igual o mayor al nro de partidos por semana
+	                
+	                
+	                if (partidosSemanales <=Liga.getListaArbitro().size() && !Liga.getListaPartido().isEmpty())
+	  */
+	private void asignarArbitros(){
+		List<Arbitro> listArbitroCopia= new ArrayList<Arbitro>(Liga.getListaArbitro());
+		List<Partido> listPartidoCopia= VistaLigaOrdenada.getListaPartidoOrdenadoFecha();
+		Random aleatorio= new Random();
+		int indiceArbitro=0;
+		
+		for (int i=0; i < listPartidoCopia.size(); ++i){
+			
+			if (listArbitroCopia.isEmpty()){
+				listArbitroCopia= new ArrayList<Arbitro>(Liga.getListaArbitro());
+			}
+			
+			indiceArbitro= aleatorio.nextInt(listArbitroCopia.size());
+			Arbitro arbitro= listArbitroCopia.remove(indiceArbitro);
+			
+			listPartidoCopia.get(i).setArbitroJuego(arbitro);
+			
+		}	
+		
+	}
+	
+	/*Asigna los goles de cada Equipo en los Partidos(se llama al pulsar el boton de generar partido)
+	  Precondicion: -Requiere que todos los Partidos se hayan cargado
+	             
+	  */
+	
+	private void asignarGoles(){
+		Random aleatorio= new Random();
+		Partido partido;
+		Equipo equipoCasa,equipoVisitante;
+		int golesEquipoCasa=0,golesEquipoVisitante=0;
+		
+		//Asignando los Goles
+		for (int i=0;i < Liga.getListaPartido().size();++i){
+			partido= Liga.getListaPartido().get(i);
+			equipoCasa= partido.getEquipoCasa();
+			equipoVisitante= partido.getEquipoVisitante();
+			
+		    golesEquipoCasa= aleatorio.nextInt(6);	
+		    golesEquipoVisitante= aleatorio.nextInt(6);
+		    
+		    //Asignando los goles de los Jugadores del EquipoCasa
+		    for (int cantGolesAsignados=0; cantGolesAsignados<golesEquipoCasa;++cantGolesAsignados){
+		    	int indiceJugador= aleatorio.nextInt(equipoCasa.getListaJugador().size());
+		    	Jugador jugador= equipoCasa.getListaJugador().get(indiceJugador);
+		    	jugador.setGolesAnotados(jugador.getGolesAnotados() + 1);
+		    	partido.agregarJugadorAnotadorCasa(jugador);
+		    }
+		    
+		    //Asignando atributos al Equipo Casa
+		    equipoCasa.setJuegosJugados(equipoCasa.getJuegosJugados()+1);
+		    equipoCasa.setGolesFavor(equipoCasa.getGolesFavor()+golesEquipoCasa);
+		    equipoCasa.setGolesContra(equipoCasa.getGolesContra() + golesEquipoVisitante);
+		    
+		    
+		  //Asignando los goles de los Jugadores del EquipoVisitante
+		    for (int cantGolesAsignados=0; cantGolesAsignados<golesEquipoVisitante;++cantGolesAsignados){
+		    	int indiceJugador= aleatorio.nextInt(equipoVisitante.getListaJugador().size());
+		    	Jugador jugador= equipoVisitante.getListaJugador().get(indiceJugador);
+		    	jugador.setGolesAnotados(jugador.getGolesAnotados() + 1);
+		    	partido.agregarJugadorAnotadorVisitante(jugador);
+		    }
+		    
+		    //Asignando atributos al Equipo Visitante
+		    equipoVisitante.setJuegosJugados(equipoVisitante.getJuegosJugados()+1);
+		    equipoVisitante.setGolesFavor(equipoVisitante.getGolesFavor()+golesEquipoVisitante);
+		    equipoVisitante.setGolesContra(equipoVisitante.getGolesContra() + golesEquipoCasa);
+		    
+		    //Los Demas Atributos de los Equipos
+		    if (golesEquipoCasa>golesEquipoVisitante){
+		    	equipoCasa.setJuegosGanados(equipoCasa.getJuegosGanados()+1);
+		    	equipoVisitante.setJuegosPerdidos(equipoVisitante.getJuegosPerdidos()+1);
+		    }
+		    else if (golesEquipoCasa<golesEquipoVisitante){
+		    	equipoVisitante.setJuegosGanados(equipoVisitante.getJuegosGanados()+1);
+		    	equipoCasa.setJuegosPerdidos(equipoCasa.getJuegosPerdidos()+1);
+		    }
+		    else if (golesEquipoCasa==golesEquipoVisitante){
+		    	equipoCasa.setJuegosEmpatados(equipoCasa.getJuegosEmpatados()+1);
+		    	equipoVisitante.setJuegosEmpatados(equipoVisitante.getJuegosEmpatados()+1);
+		    }
+		    
+		    
+		    
+		}
+		
+		//Asignar a los Puntos
+		for (int i=0;i < Liga.getListaEquipo().size();++i){
+			Equipo equipo= Liga.getListaEquipo().get(i);
+			int puntosEquipo= (equipo.getJuegosGanados()*3) + equipo.getJuegosEmpatados();
+			
+			equipo.setPuntosAcumulados(puntosEquipo);
+		}
+		
+	}
+	
 	
 	
 }
