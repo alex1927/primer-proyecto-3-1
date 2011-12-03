@@ -14,7 +14,6 @@ import modelo.Equipo;
 import modelo.Jugador;
 import modelo.Liga;
 import modelo.Partido;
-import vista.VentanaArbitro;
 import vista.VentanaAviso;
 import vista.VentanaGenerarPartido;
 import vista.VentanaPrincipal;
@@ -38,11 +37,41 @@ public class ControladorVentanaGenerarPartido implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e) {
 		
-		if (e.getSource()==ventana.getBtnGenerarPartidos())
+		if (e.getActionCommand().equalsIgnoreCase("Generar Partidos"))
 		{
-		    VentanaAviso.mostrarAviso("Los Juegos se han Generado");
+			try{
+				if (Liga.getListaEquipo().isEmpty())
+				{
+					throw new Exception("La Lista de Equipos esta Vacia!!!");
+				}
+				if (Liga.getListaArbitro().isEmpty())
+				{
+					throw new Exception("La Lista de Arbitros esta Vacia!!!");
+				}
+				if(Liga.getListaEquipo().size()%2!=0){
+					throw new Exception("El Nro de Equipos deben ser pares!!!");
+				}
+	     		for (Equipo equipo:Liga.getListaEquipo()){
+					if (!equipo.isHayJugadores())
+						throw new Exception("Todos los Equipo Deben tener Jugadores!!!");
+				}
+				
+				
+					cargarJuegos();
+					asignarFechas();
+					asignarArbitros();
+					asignarGoles();
+					
+				    VentanaAviso.mostrarAviso("Los Juegos se han Generado");
+				
+			}catch(Exception exception){
+				VentanaAviso.mostrarAviso(exception.getMessage());
+				Liga.getListaPartido().clear();
+			}
+			
+		    
 		}
-		else if (e.getSource()==ventana.getBtnSalirGp())
+		else if (e.getActionCommand().equalsIgnoreCase("Salir"))
 		{
 			cerrarVentana();
 		}
