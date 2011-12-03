@@ -1,0 +1,55 @@
+V-17.390.868
+Andres
+Ulloa
+17/08/1985
+Portero
+V- 14.850.069
+Andy
+Rizzo
+23/10/1980
+Defensa Central
+V-15.632.507
+Robert
+Diaz
+19/05/1982
+Defensa Central
+V-16.379.389
+Jesús
+Quintero
+05/12/1984
+Mediocampista de Contención
+v-17.389.118
+Robert
+Torres
+09/04/1986
+Mediocampista de Contención
+V-18.990.775
+Orlando
+Pérez
+13/10/1987
+Mediocampista de Creación
+V- 15.730.110
+Alejandro
+Londoño
+02/02/1984
+Mediocampista de Creación
+V- 16.478.831
+Luiyi
+Anaya
+11/03/1984
+Lateral Derecho
+V-17.498.561
+Edgard
+Pico
+16/08/1985
+Lateral Izquierdo
+V-18.993.010
+Rolando
+Ramirez
+27/09/1986
+Delantero
+V- 19.389.460
+Jamerson
+Renteria
+22/05/ 1990
+Delantero

@@ -1,0 +1,55 @@
+V-15.469.206
+Daniel
+Valdés
+19/01/1985
+Portero
+V-16.773.245
+José Manuel
+Rey
+01/02/1986
+Defensa Central
+V-17.178.980
+07/03/1987
+Marcelo
+Maidana
+Defensa Central
+V-18.057.478
+Miguel
+Vitali
+10/04/1988
+Mediocampista de Contención
+V-19.810.357
+Bladimir
+Morales
+18/05/1989
+Mediocampista de Contención
+V-20.748.566
+Diego
+Cochas
+20/06/1990
+Mediocampista de Creación
+V-15.379.521
+Marlon
+Frenández
+31/07/1985
+Mediocampista de Creación
+V-16.849.370
+Joel
+Cáceres
+11/08/1986
+Lateral Derecho
+V-17.004.625
+David
+Mcintosh
+25/09/1987
+Lateral Izquierdo
+V-18.297.478
+Edgar
+Pérez
+23/10/1988
+Delantero
+V-19.368.069
+Rafael
+Castellin
+09/11/1989
+Delantero

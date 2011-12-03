@@ -1,0 +1,55 @@
+V-15.234.567
+Pedro
+Caraballo
+05/12/1985
+Portero
+V-16.780.529
+Pablo
+Camacho
+09/01/1986
+Defensa Central
+V-17.897.105
+Jaime
+Bustamante
+12/02/1987
+Defensa Central
+V-18.548.060
+Alexander
+González
+30/03/1988
+Lateral Derecho
+V-19.290.418
+Julio
+Machado
+15/04/1989
+Lateral Izquierdo
+V-20.390.810
+Angelo
+Peña
+18/05/1990
+Mediocampista de Contención
+V-15.998.524
+Juan
+Morales
+17/06/1985
+Mediocampista de Cointención
+V-16.123.456
+Romulo
+Otero
+29/07/1986
+Mediocampista de Creación
+V-17.805.278
+Luis
+Figueredo
+28/08/1987
+Mediocampista de Creación
+V-18.192.110
+Anthony
+Uribe
+22/09/1988
+Delantero
+V-19.428.590
+Humberto
+Marques
+06/10/1989
+Delantero

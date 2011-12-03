@@ -1,0 +1,31 @@
+0001
+Llaneros FC
+1985
+Guanare
+Rafael Calles Pinto
+0002
+Tucanes de Amazonas
+2008
+Puerto Ayacucho
+Antonio José de Sucre
+0003
+Zamora FC
+1977
+Barinas
+Agustín Tovar (La Carolina)
+0004
+Real Espport Club
+2008
+Caracas
+Brígido Iriarte
+0005
+Club Deportivo Lara
+2006
+Cabudare
+Metropolitano de Cabudare
+
+0006
+Caracas FC
+1967
+Caracas
+Olimpico de la UCV

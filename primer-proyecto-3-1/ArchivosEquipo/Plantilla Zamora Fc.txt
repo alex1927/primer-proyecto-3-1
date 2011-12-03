@@ -1,0 +1,55 @@
+V-15.279.879
+Alfredo
+Teran
+29/06/1985
+Portero
+V-16.858.320
+Renier
+Rodriguez
+17/01/1986
+Lateral Izquierdo
+V-17.837.470
+Laynecker
+Zafra
+28/02/1987
+Lateral Derecho
+E-18.380.192
+Dario
+Figueroa
+30/03/1988
+Mediocampista de Creación
+Cedula: V-19.338.896
+Nombre: Eduardo
+Apellido: Leonett
+Fecha Nacimiento: 15/04/1989
+Posición: Mediocampista de Creación
+V-20.925.110
+Engelbert
+Pérez
+17/05/1990
+Mediocampista de Contención
+V-15.234.710
+Engelbert
+Briceño
+18/08/1985
+Mediocampista de Contención
+V-16.678.290
+Moisés
+Galezo
+28/08/1986
+Defensa Central
+V-17.926.114
+Nelson
+Semperena
+11/10/1987
+Defensa Central
+E-18.635.910
+Gabriel
+Torres
+16/02/1988
+Delantero
+V-19.740.530
+Juan 
+Garcia
+18/06/1989
+Delantero
