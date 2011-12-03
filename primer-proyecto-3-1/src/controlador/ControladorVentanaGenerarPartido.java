@@ -57,12 +57,28 @@ public class ControladorVentanaGenerarPartido implements ActionListener {
 				}
 				
 				
-					cargarJuegos();
-					asignarFechas();
-					asignarArbitros();
-					asignarGoles();
+				cargarJuegos();
+				
+				if (Liga.getListaPartido().isEmpty())
+					throw new Exception("Los Partidos no pudieron Generarse!!!");
+				
+				asignarFechas();
+				
+				for (Partido p:Liga.getListaPartido()){
+					if (p.getFechaPartido()==null)
+						throw new Exception("Error Generando la Fecha de los Partidos!!!");
+				}
+				
+				int partidosSemanales= Liga.getListaEquipo().size()/2;
+				
+				if (partidosSemanales > Liga.getListaArbitro().size())
+					throw new Exception("No Hay suficientes Arbitros para los Partidos!!!");
+				
+				asignarArbitros();
+				
+				asignarGoles();
 					
-				    VentanaAviso.mostrarAviso("Los Juegos se han Generado");
+				VentanaAviso.mostrarAviso("Los Juegos se han Generado");
 				
 			}catch(Exception exception){
 				VentanaAviso.mostrarAviso(exception.getMessage());
