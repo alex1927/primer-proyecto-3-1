@@ -101,7 +101,6 @@ public int getJuegosJugados() {
 
 public void setJuegosJugados(int juegosJugados) {
 	
-	if(juegosJugados==juegosGanados+juegosEmpatados+juegosPerdidos)
 	   this.juegosJugados = juegosJugados;
 }
 
