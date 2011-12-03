@@ -1,0 +1,55 @@
+V-15.051.914
+Javier
+Toyo
+12/06/1885
+Portero
+V-16.777.967
+Daniel
+Benítez
+03/11/1986
+Defensa Central
+V-17.854.205
+Leo
+Bautista
+17/05/1987
+Defensa Central
+V-18.933.122
+José
+Granados
+24/09/1988
+Lateral Derecho
+V-19.119.542
+Carlos 
+Lujano
+27/04/1989
+Lateral Izquierdo
+V-20.390.768
+Luis
+Vera
+14/08/1990
+Mediocampista de Contención
+V-15.656.789
+Bremer
+Piñango
+19/04/1985
+Mediocampista de Contención
+V-16.067.328
+Angel
+Chourio
+04/10/1986
+Mediocampista de Creación
+v-17.568.430
+Diego
+Garcia
+15/08/1987
+Mediocampista de Creación
+V-18.555.989
+Lewis
+Zapata
+20/10/1988
+Delantero
+19.051.986
+Lauro
+cazal
+18/01/1989
+ Delantero

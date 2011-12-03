@@ -1,0 +1,62 @@
+V-15.235.253
+Alain
+Baroja
+20/09/1985
+Portero
+V-18.110.925
+Edgard
+Perez
+18/03/1984
+Portero
+V-16.564.323.
+Charly 
+Velazco
+22/04/1988
+Defensa Central
+
+V-16.546.789
+Anderson
+Orozco
+01/01/1989
+Defensa Central
+E- 18.678.456
+Nicolás
+Massia
+07/05/1989
+MedioCampista de Creación
+V- 17.598.567
+Marcel
+Rivero
+04/06/1990
+Mediocampista de Creación
+V- 19.390.593
+Eduardo
+Rivero
+24/07/1990
+Lateral Derecho
+V-17.070.659
+Antonio
+González
+15/12/1986
+Lateral Izquierdo
+V-20.345.657
+Ronald
+Mora
+26/07/1991
+Mediocampista de Contención
+V- +18.567.130
+Guillermo
+Ramirez
+16/02/1988
+Mediocampista de Contención
+V- 16.749.060
+Ever
+Apellido: Espinoza
+Fecha Nacimiento: 03/03/1985
+Posición: Delantero
+v-18.543.098
+Roberto 
+Jimenez
+25/11/1988
+Delantero
+
