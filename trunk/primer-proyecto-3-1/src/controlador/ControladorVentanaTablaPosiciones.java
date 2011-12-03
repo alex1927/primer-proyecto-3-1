@@ -73,7 +73,6 @@ public void windowOpened(WindowEvent e) {
 
 public void windowClosing(WindowEvent e) {
 	cerrarVentana();
-	
 }
 
 public void windowClosed(WindowEvent e) {
@@ -94,42 +93,32 @@ public void windowDeactivated(WindowEvent e) {
 
 private class ModeloTabla extends DefaultTableModel
 {
-
 	public ModeloTabla() {
 		super();
-		
-	}
-
-	public ModeloTabla(int rowCount, int columnCount) {
-		super(rowCount, columnCount);
-		
-	}
-
-	public ModeloTabla(Object[] columnNames, int rowCount) {
-		super(columnNames, rowCount);
-		
-	}
-
-	public ModeloTabla(Object[][] data, Object[] columnNames) {
-		super(data, columnNames);
-		
-	}
-
-	public ModeloTabla(Vector columnNames, int rowCount) {
-		super(columnNames, rowCount);
-		
-	}
-
-	public ModeloTabla(Vector data, Vector columnNames) {
-		super(data, columnNames);
-		
-	}
-	
-	public boolean isCellEditable(int row,int col)
-	{
-		return false;
-	}
-	
 }
 
+public ModeloTabla(int rowCount, int columnCount) {
+	super(rowCount, columnCount);
+}
+
+public ModeloTabla(Object[] columnNames, int rowCount) {
+	super(columnNames, rowCount);
+}
+
+public ModeloTabla(Object[][] data, Object[] columnNames) {
+	super(data, columnNames);
+}
+
+public ModeloTabla(Vector columnNames, int rowCount) {
+	super(columnNames, rowCount);
+}
+
+public ModeloTabla(Vector data, Vector columnNames) {
+	super(data, columnNames);
+}
+	
+public boolean isCellEditable(int row,int col){
+	return false;
+}	
+}
 }
