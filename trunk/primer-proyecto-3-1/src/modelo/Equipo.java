@@ -152,4 +152,8 @@ public int getGolesContra() {
 public void setGolesContra(int golesContra) {
 	this.golesContra = golesContra;
 }
+
+public List<Jugador> getListaJugador() {
+	return listaJugador;
+}
 }
