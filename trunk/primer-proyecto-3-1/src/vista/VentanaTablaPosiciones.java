@@ -42,16 +42,16 @@ public class VentanaTablaPosiciones extends JFrame{
         panel.setLayout(null);
         
         panel.add(scroll);
-        scroll.setBounds(10, 10, 615, 140);
+        scroll.setBounds(10, 10, 615, 170);
         
         panel.add(lblTitulo);
         lblTitulo.setBounds(250, 10,150, 30);
          
         panel.add(btnGuardarTp);
-  	    btnGuardarTp.setBounds(300, 220, 80 , 80);
+  	    btnGuardarTp.setBounds(220, 220, 80 , 80);
   	     
   	    panel.add(btnSalirTp);
-	    btnSalirTp.setBounds(420, 220, 80, 80);
+	    btnSalirTp.setBounds(340, 220, 80, 80);
 	    
 	    
 		this.add(panel);
