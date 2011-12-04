@@ -17,14 +17,14 @@ public class VentanaGenerarPartido extends JFrame{
 	
 	
 	public VentanaGenerarPartido(){
-		super ("Liga de Futbol- Partido");
-		JPanel panel = new JPanel();
+		super ("Liga de Futbol - Partido");
+	       JPanelGradiente panel = new JPanelGradiente();
 		
 	    ImageIcon imgCancha= new ImageIcon(getClass().getResource("imagenes" + File.separator + "cancha.jpg"));
         ImageIcon imgGenerarp= new ImageIcon(getClass().getResource("imagenes" + File.separator + "generar partido.jpg"));
         ImageIcon imgSalir= new ImageIcon(getClass().getResource("imagenes" + File.separator + "salir.jpg"));
 		
-		JLabel lblPartidos = new JLabel ("Generar Partidos");
+		JLabel lblPartidos = new JLabel ("GENERAR PARTIDOS");
 		JLabel lblLogo= new JLabel(imgCancha);
 		
 		btnGenerarPartidos = new JButton(imgGenerarp);
@@ -36,7 +36,7 @@ public class VentanaGenerarPartido extends JFrame{
 		panel.setLayout(null);
 		
 		panel.add(lblPartidos);
-		lblPartidos.setBounds(210, 20, 100, 20);
+		lblPartidos.setBounds(200, 20, 150, 20);
 		
 		panel.add(lblLogo);
 	    lblLogo.setBounds(70, 50, 400, 260);
@@ -70,12 +70,6 @@ public class VentanaGenerarPartido extends JFrame{
 		btnGenerarPartidos.setEnabled(true);
 	}
 	
-	public JButton getBtnGenerarPartidos(){
-		return btnGenerarPartidos;
-	}
 	
-	public JButton getBtnSalirGp(){
-		return btnSalirGp;
-	}
 }
 
