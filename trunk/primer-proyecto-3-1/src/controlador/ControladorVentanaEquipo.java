@@ -208,6 +208,7 @@ public void buscarEquipo(){
 				{
 					if (!ventana.getTxtCodigoEq().isEmpty()){
 						ventana.habilitarGuardar();
+						buscarEquipo();
 					}
 				}
 			}
