@@ -115,7 +115,7 @@ public void buscarEquipo(){
 	
 		public void actionPerformed(ActionEvent a) {
 
-			if (a.getSource()==ventana.getBtnGuardarEq())
+			if (a.getActionCommand().equalsIgnoreCase("Guardar"))
 			{
                if (!ventana.getTxtCodigoEq().isEmpty() && 
             	   !ventana.getTxtNombreEq().isEmpty() &&
@@ -181,11 +181,11 @@ public void buscarEquipo(){
             	   
 			    
 			}
-			else if (a.getSource()==ventana.getBtnSalirEq())
+			else if (a.getActionCommand().equalsIgnoreCase("Salir"))
 			{
 				cerrarVentana();
 			}
-			else if (a.getSource()==ventana.getBtnCancelarEq())
+			else if (a.getActionCommand().equalsIgnoreCase("Cancelar"))
 			{
 				inicializarVentana();
 				ventana.cancelar();
