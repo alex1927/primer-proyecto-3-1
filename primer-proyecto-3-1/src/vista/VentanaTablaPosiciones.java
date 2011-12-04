@@ -20,44 +20,36 @@ public class VentanaTablaPosiciones extends JFrame{
     
     public VentanaTablaPosiciones (){
     	    	
-    	super ("Reportes");
-    	ImageIcon imgGuardar= new ImageIcon(getClass().getResource("imagenes" + File.separator + "guardar.jpg"));	
+		super ("Liga de Futbol - Reporte - Tabla de Posiciones");
     	ImageIcon imgSalir= new ImageIcon(getClass().getResource("imagenes" + File.separator + "salir.jpg"));
     	
     	
-    	JPanel panel = new JPanel();
-    	
-    	 
+        JPanelGradiente panel = new JPanelGradiente();
     	JLabel lblTitulo= new JLabel("TABLA DE POSICIONES");  
     	 
     	reporteGenerado= new JTable();
         JScrollPane scroll= new JScrollPane(reporteGenerado);
-         
-        btnGuardarTp= new JButton("",imgGuardar);
+
         btnSalirTp= new JButton("",imgSalir);
-        
-        btnGuardarTp.setActionCommand("Guardar");
+
         btnSalirTp.setActionCommand("Salir");
         
         panel.setLayout(null);
         
         panel.add(scroll);
-        scroll.setBounds(10, 10, 615, 170);
+        scroll.setBounds(10, 10, 615, 200);
         
         panel.add(lblTitulo);
         lblTitulo.setBounds(250, 10,150, 30);
-         
-        panel.add(btnGuardarTp);
-  	    btnGuardarTp.setBounds(220, 220, 80 , 80);
   	     
   	    panel.add(btnSalirTp);
-	    btnSalirTp.setBounds(340, 220, 80, 80);
+	    btnSalirTp.setBounds(270, 240, 80, 80);
 	    
 	    
 		this.add(panel);
 		this.setVisible(true);
 		
-		this.setSize(640, 400);
+		this.setSize(650, 400);
 		
 		}
 		
@@ -66,7 +58,6 @@ public class VentanaTablaPosiciones extends JFrame{
     }
     
 	public void addListener(ActionListener l){
-		btnGuardarTp.addActionListener(l);
 		btnSalirTp.addActionListener(l);
     }
 	
