@@ -22,24 +22,28 @@ public class VentanaReportes extends JFrame {
 	
 	
 	public VentanaReportes (){
-		
+		super ("Liga de Futbol - Reporte");
+		ImageIcon imgReportes= new ImageIcon(getClass().getResource("imagenes" + File.separator + "reporte.jpg"));
 		ImageIcon imgTablaPosiciones= new ImageIcon(getClass().getResource("imagenes" + File.separator + "tabla posiciones.jpg"));
 	    ImageIcon imgCalendario= new ImageIcon(getClass().getResource("imagenes" + File.separator + "calendario.jpg"));
 	    ImageIcon imgSalir= new ImageIcon(getClass().getResource("imagenes" + File.separator + "salir.jpg"));
-		
-		
- 
-		JPanel panel = new JPanel();
-		JLabel lblReportes = new JLabel ("*** REPORTE ***");
+
+	    JPanelGradiente panel = new JPanelGradiente();
+		JLabel lblLogo= new JLabel(imgReportes);
+		JLabel lblReportes = new JLabel ("REPORTES");
 		btnTablaPosiciones = new JButton ("",imgTablaPosiciones);
 		btnCalendario = new JButton ("",imgCalendario);
 		btnSalirRep = new JButton ("",imgSalir);
 		
-		btnTablaPosiciones.setActionCommand("Tabla de Posiciones");
+		btnTablaPosiciones.setActionCommand("Tabla Posiciones");
 		btnCalendario.setActionCommand("Calendario");
+		btnSalirRep.setActionCommand("Salir");
 		
 		
 		panel.setLayout(null);
+		
+		panel.add(lblLogo);
+		lblLogo.setBounds(160, 1, 140, 300);
 		
 		panel.add(lblReportes);
 		lblReportes.setBounds(200, 20, 100, 25);
@@ -55,7 +59,7 @@ public class VentanaReportes extends JFrame {
 		
 		this.add(panel);
 		this.setVisible(true);
-		this.setSize(600, 450);	
+		this.setSize(500, 400);	
 		
 		
 }
@@ -69,15 +73,4 @@ public class VentanaReportes extends JFrame {
 		this.addWindowListener(l);
 	}	
 
-	public JButton getBtnTablaPosiciones() {
-		return btnTablaPosiciones;
-	}
-
-	public JButton getBtnCalendario() {
-		return btnCalendario;
-	}
-    
-	public JButton getBtnSalirRep() {
-		return btnSalirRep;
-	}	 
 }
