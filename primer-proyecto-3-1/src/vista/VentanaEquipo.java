@@ -30,7 +30,8 @@ public class VentanaEquipo extends JFrame{
 
 public VentanaEquipo(){
 	
-	super ("Liga de Futbol- Equipo");
+	super ("Liga de Futbol - Equipo");
+	ImageIcon imgEquipo= new ImageIcon(getClass().getResource("imagenes" + File.separator + "equipos.jpg"));
     ImageIcon imgGuardar= new ImageIcon(getClass().getResource("imagenes" + File.separator + "guardar.jpg"));
     ImageIcon imgCancelar= new ImageIcon(getClass().getResource("imagenes" + File.separator + "cancelar.jpg"));
     ImageIcon imgSalir= new ImageIcon(getClass().getResource("imagenes" + File.separator + "salir.jpg"));
@@ -38,10 +39,11 @@ public VentanaEquipo(){
 	
 	
 	JPanelGradiente panel= new JPanelGradiente();
+	JLabel lblLogo= new JLabel(imgEquipo);
 	JLabel lblRegistrarEquipo = new JLabel ("EQUIPO");
 	JLabel lblCodigoEq = new JLabel ("Codigo");
 	JLabel lblNombreEq = new JLabel ("Nombre");
-	JLabel lblAnioEq = new JLabel ("Año  de");
+	JLabel lblAnioEq = new JLabel ("Anio  de");
 	JLabel lblFundEq = new JLabel ("Fundacion");
 	JLabel lblCiudadEq =new JLabel ("Ciudad");
 	JLabel lblNombEq = new JLabel ("Nombre");
@@ -68,23 +70,28 @@ public VentanaEquipo(){
 	
 	   
 	btnGuardarEq.setActionCommand("Guardar");
+	btnCancelarEq.setActionCommand("Cancelar");
+	btnSalirEq.setActionCommand("Salir");
 	   	
 	panel.setLayout(null);
 	
+	panel.add(lblLogo);
+	lblLogo.setBounds(360, 60, 90, 80);
+	   
 	panel.add(lblRegistrarEquipo);
-	lblRegistrarEquipo.setBounds(200, 20, 140, 20);
+	lblRegistrarEquipo.setBounds(200, 30, 140, 20);
 	
 	panel.add(lblCodigoEq);
-	lblCodigoEq.setBounds(60, 60, 120, 25);
+	lblCodigoEq.setBounds(60, 60, 180, 25);
 	
 	panel.add(txtCodigoEq);
-	txtCodigoEq.setBounds(160, 60, 120, 25);
+	txtCodigoEq.setBounds(160, 60, 180, 25);
 	
 	panel.add(lblNombreEq);
 	lblNombreEq.setBounds(60, 100, 50 , 25);
 	
 	panel.add(txtNombreEq);
-	txtNombreEq.setBounds(160, 100 ,120 , 25);
+	txtNombreEq.setBounds(160, 100 ,180 , 25);
 	
 	panel.add(lblAnioEq);
 	lblAnioEq.setBounds(60, 130, 110, 25);
@@ -100,7 +107,7 @@ public VentanaEquipo(){
 	lblCiudadEq.setBounds(60, 180, 130, 25);
 	
 	panel.add(txtCiudadEq);
-	txtCiudadEq.setBounds(160, 180, 130, 25);
+	txtCiudadEq.setBounds(160, 180, 180, 25);
 	
 	panel.add(lblNombEq);
 	lblNombEq.setBounds(60, 210, 130, 25);
@@ -109,7 +116,7 @@ public VentanaEquipo(){
 	lblEstadioEq.setBounds(60, 225, 130, 25);
 	
 	panel.add(txtNombEstEq);
-	txtNombEstEq.setBounds(160, 220, 130, 25);
+	txtNombEstEq.setBounds(160, 220, 180, 25);
 	
 	panel.add(btnGuardarEq);
 	btnGuardarEq.setBounds(60, 280, 80, 80);
@@ -122,7 +129,7 @@ public VentanaEquipo(){
 	
  	this.add(panel);
 		this.setVisible(true);
-		this.setSize(600, 450);	
+		this.setSize(500, 450);	
    }
 
 		public void addListener(ActionListener l){
@@ -209,18 +216,6 @@ public VentanaEquipo(){
 				btnSalirEq.setEnabled(true);
 			}
 			
-			public JButton getBtnGuardarEq() {
-				return btnGuardarEq;
-			}
-
-			public JButton getBtnCancelarEq() {
-				return btnCancelarEq;
-			}
-	        
-			public JButton getBtnSalirEq() {
-				return btnSalirEq;
-			}
-	        
 	        public void guardado(){
 	        	txtCodigoEq.setEnabled(false);
 	        	txtNombreEq.setEnabled(false);
