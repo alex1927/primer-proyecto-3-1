@@ -37,6 +37,24 @@ public class ControladorVentanaGenerarPartido implements ActionListener,WindowLi
       this.ventana.dispose();  
     }
 	
+	private void limpiarCampeonato(){
+		Liga.getListaPartido().clear();
+		List<Equipo> listaEquipos= Liga.getListaEquipo();
+		for (Equipo equipo:listaEquipos){
+			equipo.setGolesContra(0);
+			equipo.setGolesFavor(0);
+			equipo.setJuegosJugados(0);
+			equipo.setJuegosPerdidos(0);
+			equipo.setJuegosGanados(0);
+			equipo.setJuegosEmpatados(0);
+			equipo.setPuntosAcumulados(0);
+			for (Jugador j:equipo.getListaJugador()){
+				j.setGolesAnotados(0);
+			}
+		}
+	}
+	
+	
 	public void actionPerformed(ActionEvent e) {
 		
 		if (e.getActionCommand().equalsIgnoreCase("Generar Partidos"))
@@ -58,7 +76,7 @@ public class ControladorVentanaGenerarPartido implements ActionListener,WindowLi
 						throw new Exception("Todos los Equipo Deben tener Jugadores!!!");
 				}
 				
-				
+				limpiarCampeonato();
 				cargarJuegos();
 				
 				if (Liga.getListaPartido().isEmpty())
