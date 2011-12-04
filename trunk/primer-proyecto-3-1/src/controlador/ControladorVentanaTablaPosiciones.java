@@ -38,11 +38,7 @@ public class ControladorVentanaTablaPosiciones implements ActionListener,WindowL
 
 public void actionPerformed(ActionEvent e) {
 		
-		if (e.getActionCommand().equalsIgnoreCase("Guardar"))
-		{
-		   
-		}
-		else if (e.getActionCommand().equalsIgnoreCase("Salir"))
+	if (e.getActionCommand().equalsIgnoreCase("Salir"))
 		{
 			cerrarVentana();
 		}
