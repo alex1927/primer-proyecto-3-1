@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusListener;
 import java.awt.event.KeyListener;
+import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -19,13 +20,14 @@ import vista.VentanaGenerarPartido;
 import vista.VentanaPrincipal;
 import vista.VistaLigaOrdenada;
 
-public class ControladorVentanaGenerarPartido implements ActionListener {
+public class ControladorVentanaGenerarPartido implements ActionListener,WindowListener {
 	
 	private VentanaGenerarPartido ventana;
 
 	public ControladorVentanaGenerarPartido() {
 		ventana = new VentanaGenerarPartido();
-        ventana.addListener(this);
+        ventana.addListener((ActionListener)this);
+        ventana.addListener((WindowListener)this);
 	}
 
 	private void cerrarVentana()
@@ -246,6 +248,9 @@ public class ControladorVentanaGenerarPartido implements ActionListener {
 		    golesEquipoCasa= aleatorio.nextInt(6);	
 		    golesEquipoVisitante= aleatorio.nextInt(6);
 		    
+		    partido.setGolesCasa(golesEquipoCasa);
+		    partido.setGolesVisitante(golesEquipoVisitante);
+
 		    //Asignando los goles de los Jugadores del EquipoCasa
 		    for (int cantGolesAsignados=0; cantGolesAsignados<golesEquipoCasa;++cantGolesAsignados){
 		    	int indiceJugador= aleatorio.nextInt(equipoCasa.getListaJugador().size());
@@ -286,21 +291,59 @@ public class ControladorVentanaGenerarPartido implements ActionListener {
 		    	equipoCasa.setJuegosEmpatados(equipoCasa.getJuegosEmpatados()+1);
 		    	equipoVisitante.setJuegosEmpatados(equipoVisitante.getJuegosEmpatados()+1);
 		    }
-		    
-		    
-		    
+
 		}
 		
 		//Asignar a los Puntos
 		for (int i=0;i < Liga.getListaEquipo().size();++i){
 			Equipo equipo= Liga.getListaEquipo().get(i);
-			int puntosEquipo= (equipo.getJuegosGanados()*3) + equipo.getJuegosEmpatados();
+			int puntosEquipo= (equipo.getJuegosGanados()*3 + equipo.getJuegosEmpatados()*1);
 			
 			equipo.setPuntosAcumulados(puntosEquipo);
 		}
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
 		
 	}
-	
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		cerrarVentana();
+		
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }
