@@ -88,25 +88,37 @@ public void windowOpened(WindowEvent evt)
 
 public void actionPerformed(ActionEvent a) {
 	
-		if (a.getSource()==ventana.getBtnGuardarArb())
+		if (a.getActionCommand().equalsIgnoreCase("Guardar"))
 		{
 			
-			Arbitro obj = new Arbitro();
-			obj.setCedula(ventana.getCmbCedulaArb()+ventana.getTxtCedulaArb());
-			obj.setNombre(ventana.getTxtNombreArb());
-			obj.setApellido(ventana.getTxtApellidoArb());
-			obj.setFechaNacimiento(ventana.getTxtFechaNacDiaArb()+"/"+ventana.getTxtFechaNacMesArb()+"/"+ventana.getTxtFechaNacAnioArb());
-			
-			Liga.agregarArbitro(obj);
-			
-		    VentanaAviso.mostrarAviso("El Arbitro se ha Registrado con Exito");
-			inicializarVentana();
+			if (!ventana.getTxtCedulaArb().isEmpty() && 
+					  !ventana.getTxtNombreArb().isEmpty() &&
+					  !ventana.getTxtApellidoArb().isEmpty() &&
+					  !ventana.getTxtFechaNacDiaArb().isEmpty() &&
+					  !ventana.getTxtFechaNacMesArb().isEmpty() &&
+					  !ventana.getTxtFechaNacAnioArb().isEmpty())
+				  {
+					Arbitro obj = new Arbitro();
+					obj.setCedula(ventana.getCmbCedulaArb()+ventana.getTxtCedulaArb());
+					obj.setNombre(ventana.getTxtNombreArb());
+					obj.setApellido(ventana.getTxtApellidoArb());
+					obj.setFechaNacimiento(ventana.getTxtFechaNacDiaArb()+"/"+ventana.getTxtFechaNacMesArb()+"/"+ventana.getTxtFechaNacAnioArb());
+					
+					Liga.agregarArbitro(obj);
+					
+				    VentanaAviso.mostrarAviso("El Arbitro se ha Registrado con Exito");
+					inicializarVentana();
+				  }
+			  else
+			  {
+				  VentanaAviso.mostrarAviso("Por Favor Introduzca todos los campos");
+			  }
 		}
-		else if (a.getSource()==ventana.getBtnSalirArb())
+		else if (a.getActionCommand().equalsIgnoreCase("Salir"))
 		{
 			cerrarVentana();
 		}
-		else if (a.getSource()==ventana.getBtnCancelarArb())
+		else if (a.getActionCommand().equalsIgnoreCase("Cancelar"))
 		{
 			inicializarVentana();
 			ventana.cancelar();
