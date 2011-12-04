@@ -33,17 +33,17 @@ public class VentanaArbitro extends JFrame {
 	
    public VentanaArbitro (){
 	   
-	   super ("Liga de Futbol- Arbitro");
+	   super ("Liga de Futbol - Arbitro");
 	   ImageIcon imgArbitro= new ImageIcon(getClass().getResource("imagenes" + File.separator + "arbitros.jpg"));
        ImageIcon imgGuardar= new ImageIcon(getClass().getResource("imagenes" + File.separator + "guardar.jpg"));
        ImageIcon imgCancelar= new ImageIcon(getClass().getResource("imagenes" + File.separator + "cancelar.jpg"));
        ImageIcon imgSalir= new ImageIcon(getClass().getResource("imagenes" + File.separator + "salir.jpg"));
 
 	   
-	   JPanel panel = new JPanel();
+       JPanelGradiente panel = new JPanelGradiente();
 	   JLabel lblLogo= new JLabel(imgArbitro);
 	   
-	   JLabel lblRegistrarArbitro = new JLabel ("Arbitro");
+	   JLabel lblRegistrarArbitro = new JLabel ("ARBITRO");
 	   JLabel lblCedulaArb = new JLabel ("Cedula");
 	   cmbCedulaArb = new JComboBox (new String[] {"V", "E"} ); 
 	   JLabel lblNombreArb = new JLabel ("Nombre");
@@ -72,14 +72,16 @@ public class VentanaArbitro extends JFrame {
 	   txtFechaNacAnioArb.setName("txtFechaNacAnioArb");
 	   
 	   btnGuardarArb.setActionCommand("Guardar");
+	   btnCancelarArb.setActionCommand("Cancelar");
+	   btnSalirArb.setActionCommand("Salir");
 	   
 	   panel.setLayout(null);
 	   
 	   panel.add(lblLogo);
-	   lblLogo.setBounds(370, 20, 80, 80);
+	   lblLogo.setBounds(370, 50, 80, 80);
 	   
 	   panel.add(lblRegistrarArbitro);
-	   lblRegistrarArbitro.setBounds(200, 20, 100, 20);
+	   lblRegistrarArbitro.setBounds(100, 20, 100, 20);
 	   
 	   panel.add(lblCedulaArb);
 	   lblCedulaArb.setBounds(60, 50, 60, 25);
@@ -213,20 +215,7 @@ public class VentanaArbitro extends JFrame {
 			return txtFechaNacAnioArb.getText();
 		}
 		
-		public JButton getBtnGuardarArb(){
-			return btnGuardarArb;
-		}
-		
-		public JButton getBtnCancelarArb(){
-			return btnCancelarArb;
-		}
-		
-		public JButton getBtnSalirArb(){
-			return btnSalirArb;
-		}
-		
 		public void deshabilitarGuardar(){
-			System.out.println("Entra");
 			btnGuardarArb.setEnabled(false);
 		}
 		
