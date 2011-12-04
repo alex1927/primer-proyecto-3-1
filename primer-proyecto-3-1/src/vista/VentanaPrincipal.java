@@ -31,7 +31,7 @@ public VentanaPrincipal (){
     ImageIcon imgReporte= new ImageIcon(getClass().getResource("imagenes" + File.separator + "reportes.jpg"));
     ImageIcon imgSalirPrincipal= new ImageIcon(getClass().getResource("imagenes" + File.separator + "salir.jpg"));
 	
-	   JPanel panel = new JPanel();
+    JPanelGradiente panel = new JPanelGradiente();
 	   btnArbitro = new JButton ("",imgArbitro);
 	   btnEquipo = new JButton ("",imgEquipo);
 	   btnPartido = new JButton ("",imgPartido);
