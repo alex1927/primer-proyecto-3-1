@@ -17,8 +17,8 @@ public class JPanelGradiente extends JPanel implements Serializable{
 	
 	
 	public JPanelGradiente(){
-		primerColor= new Color(56,172,222);
-		segundoColor= new Color(173,243,255);
+		primerColor= new Color(51,255,153);
+		segundoColor= new Color(255,255,153);
 		
 	}
 	
